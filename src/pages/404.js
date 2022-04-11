@@ -10,7 +10,7 @@ const NotFound = () => {
         transition={{ repeat: Infinity, duration: 2, repeatType: "reverse" }}
         width={["100%", "95%", "70%", "60%", "58%"]}
         margin="0 auto">
-            <Image src="/k.svg" alt="Error 404 not found" />
+            <Image src="/404.svg" alt="Error 404 not found" />
 
    </MotionBox>
    <Box marginY={4}>

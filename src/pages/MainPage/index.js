@@ -1,8 +1,10 @@
-import {Text, Box, Flex, Heading ,Link,Button,Stack,Image} from '@chakra-ui/react'
+import {Text, Box, Flex, Heading,useColorMode ,Link,Button,Stack,Image} from '@chakra-ui/react'
 import React from 'react'
 import MotionBox from '../../components/Motion/MotionBox'
 
 const MainPage = () => {
+  const {colorMode}=useColorMode();
+
   return (
     <Flex
     textAlign={'start'}
@@ -31,13 +33,13 @@ const MainPage = () => {
     </Text>
     <Flex>
         <Link href="/Login" passHref>
-          <Button
+          <Button  backgroundColor={colorMode=="light"?'gray.300':"teal.500"}
             variant="primary"  px={6} mr={6}>
            Login
           </Button>
         </Link>
         <Link href="/Signup" passHref>
-          <Button rounded={'full'} px={6} >
+          <Button  backgroundColor={colorMode=="light"?'gray.300':"teal.500"} rounded={'full'} px={6} >
             SignUp
           </Button>
         </Link>
