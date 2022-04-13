@@ -1,9 +1,11 @@
-import { Flex } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
 import BlogCard from "../../components/BlogCard"
-
+//https://bit.ly/2k1H1t6
 const Index = () => {
     const blog = [
-        {imageUrl: 'https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        {
+        id:1,
+        imageUrl: 'https://bit.ly/2k1H1t6',
         imageAlt: 'blog image',
         name:"Blog name",
         Tags:"#blog #blog",
@@ -11,7 +13,9 @@ const Index = () => {
         formattedPrice: '$1,900.00',
         reviewCount: 34,
         rating: 4,},
-        {imageUrl: 'https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        {
+        id:2,    
+        imageUrl: 'https://bit.ly/2k1H1t6',
         imageAlt: 'blog image',
         name:"Blog name",
         Tags:"#blog #blog",
@@ -19,7 +23,9 @@ const Index = () => {
         formattedPrice: '$1,900.00',
         reviewCount: 34,
         rating: 4,},
-        {imageUrl: 'https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        {
+        id:3,
+        imageUrl: 'https://bit.ly/2k1H1t6',
         imageAlt: 'blog image',
         name:"Blog name",
         Tags:"#blog #blog",
@@ -27,7 +33,9 @@ const Index = () => {
         formattedPrice: '$1,900.00',
         reviewCount: 34,
         rating: 4,},
-        {imageUrl: 'https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        {
+            id:4,    
+        imageUrl: 'https://bit.ly/2k1H1t6',
         imageAlt: 'blog image',
         name:"Blog name",
         Tags:"#blog #blog",
@@ -37,11 +45,11 @@ const Index = () => {
         rating: 4,},
     ]
   return (
-   <Flex gridGap={3}>
+   <Box >
    {blog.map((x)=>(
-       <BlogCard key={'1'} blog={x}/>
+       <BlogCard key={'1'} blog={x} />
    ))}
-   </Flex>
+   </Box>
   )
 }
 

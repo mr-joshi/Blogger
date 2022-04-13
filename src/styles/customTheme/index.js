@@ -16,7 +16,8 @@ const customTheme = extendTheme({
             body:{
                 bg : mode('url("/k.svg") ',"rgb(14, 16, 21)")(props),
                 backgroundSize: '100%',
-                transform: 'scale(1) translateX(0)'
+                transform: 'scale(1) translateX(0)',
+                h: "full"
                 
                 
             },

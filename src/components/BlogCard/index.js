@@ -1,13 +1,16 @@
-import {Box,Image,Badge} from '@chakra-ui/react'
+import {Box,Image,Badge,Center} from '@chakra-ui/react'
 import Link from 'next/link'
 const BlogCard = ({blog}) => {
   
 
   return (
-    <Link href="/">
-      <Box  maxW='sm' borderWidth='1px' borderRadius='lg' overflow='Hidden'>
-      <Image src={blog.imageUrl} alt={blog.imageAlt}/>
-      <Box p='6'>
+    <Link href={'/BlogPosts/'+blog.id} >
+      <Box  mb={10}  maxW='800px' borderWidth='3px' borderRadius='lg'  overflow='Hidden'>
+   
+      <Image  borderRadius="md" src={blog.imageUrl} />      
+
+
+          <Box p='6' >
         <Box display='flex' alignItems='baseline'>
            
             <Badge borderRadius='full' px='2' colorScheme='teal'>

@@ -1,5 +1,6 @@
-import {Text, Box, Flex, Heading,useColorMode ,Link,Button,Stack,Image} from '@chakra-ui/react'
+import {Text, Box, Flex, Heading,useColorMode ,Button,Stack,Image} from '@chakra-ui/react'
 import React from 'react'
+import Link from 'next/dist/client/link'
 import MotionBox from '../../components/Motion/MotionBox'
 
 const MainPage = () => {
@@ -20,7 +21,7 @@ const MainPage = () => {
       lineHeight={'110%'}
       >
       Blogging the reel world:{' '}
-      <Text as={'span'} variant="primary">
+      <Text as={'span'} variant="primary" color={colorMode=="light"?'red.500':"yellow.500"} rounded={'full'}>
       Make it Real World{' '}
       </Text>
       BLOGGER....
@@ -32,13 +33,13 @@ const MainPage = () => {
       We let you safely store thousands of posts, photos, and more with Google for free.
     </Text>
     <Flex>
-        <Link href="/Login" passHref>
+        <Link href="/Auth/login" passHref>
           <Button  backgroundColor={colorMode=="light"?'gray.300':"teal.500"}
             variant="primary"  px={6} mr={6}>
            Login
           </Button>
         </Link>
-        <Link href="/Signup" passHref>
+        <Link href="/Auth/signUp" passHref>
           <Button  backgroundColor={colorMode=="light"?'gray.300':"teal.500"} rounded={'full'} px={6} >
             SignUp
           </Button>
@@ -57,6 +58,7 @@ const MainPage = () => {
           />
        
     </Flex>
+   
   </Flex>
   )
 }
